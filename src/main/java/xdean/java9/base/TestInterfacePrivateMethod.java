@@ -3,7 +3,8 @@ package xdean.java9.base;
 public class TestInterfacePrivateMethod {
   public static void main(String[] args) {
     Impl impl = new Impl();
-//     impl.worker();
+    impl.func();
+    impl.worker();
     ((Inter) impl).worker();
   }
 
@@ -11,7 +12,7 @@ public class TestInterfacePrivateMethod {
     void func();
 
     private void worker() {
-      System.out.println("TestInterfacePrivateMethod.Inter.worker()");
+      System.out.println("work");
     }
 
     default void foo() {
@@ -26,7 +27,11 @@ public class TestInterfacePrivateMethod {
   public static class Impl implements Inter {
     @Override
     public void func() {
+      Inter.super.worker();
+    }
 
+    private void worker() {
+      Inter.super.worker();
     }
   }
 }
