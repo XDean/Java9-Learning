@@ -1,4 +1,4 @@
-package xdean.java9.base;
+package xdean.java9.lang;
 
 public class TestInterfacePrivateMethod {
   public static void main(String[] args) {

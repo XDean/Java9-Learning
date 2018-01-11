@@ -1,4 +1,4 @@
-package xdean.java9.eclipse;
+package xdean.java9.lang;
 
 import java.io.Closeable;
 import java.io.IOException;
